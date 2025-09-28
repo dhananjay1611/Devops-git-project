@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jon's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      animation: fadeInBody 1s ease-in;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ecf0f1;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .profile-image {
+      display: block;
+      margin: 30px auto;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #4A90E2;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      animation: popIn 1s ease;
+    }
+
+    .project, .review {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .project:hover, .review:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    a {
+      color: #4A90E2;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jon's Portfolio</h1>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Profile Image from S3 -->
+ <img src="https://dhananjayingole-terraform-bucket.s3.ap-south-1.amazonaws.com/profile.png" alt="Jon's Profile" class="profile-image" width="250" height="250" />
+
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Weather App</h3>
+      <p>A real-time weather app using OpenWeather API, built with HTML, CSS, and JavaScript.</p>
+    </div>
+
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>Responsive personal portfolio using HTML, CSS animations, and basic JavaScript.</p>
+    </div>
+
+    <div class="project">
+      <h3>Task Manager</h3>
+      <p>A to-do app with localStorage support, allowing users to manage daily tasks efficiently.</p>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2>Reviews</h2>
+
+    <div class="review">
+      <strong>Emily R. (Client)</strong>
+      <p>“Jon is a very talented developer. He built my website exactly as I wanted, and even added useful features I hadn’t thought of!”</p>
+    </div>
+
+    <div class="review">
+      <strong>Michael B. (Team Lead)</strong>
+      <p>“A dependable team member with great attention to detail. Jon always delivers high-quality code on time.”</p>
+    </div>
+
+    <div class="review">
+      <strong>Sophia L. (Designer)</strong>
+      <p>“Working with Jon was great! He brings designs to life with beautiful animations and responsive layouts.”</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: jon@example.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/jondev" target="_blank" rel="noopener">linkedin.com/in/jondev</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Jon's Portfolio. All rights reserved.
+  </footer>
+
+</body>
+</html>
